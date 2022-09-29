@@ -16,11 +16,10 @@
 <script>
 // IMPORTIAMO AXIOS
 import axios from 'axios'
-import postCard from './MainComponents/PostCard.vue'
-import tagPostsCard from './MainComponents/TagPostsCard.vue'
+import postCard from '../components/MainComponents/PostCard.vue'
+import tagPostsCard from '../components/MainComponents/TagPostsCard.vue'
 
 export default {
-name : 'app',
 components: {
         postCard,
         tagPostsCard,

@@ -1,20 +1,20 @@
 <template>
 <div class="body-app pb-3">
     <HeaderComponent/>
-    <MainComponent/>
+
+    //! INSERIAMO QUI LE ROUTER INDICATE DALL'USER
+   <router-view></router-view>
 </div>
 </template>
 
 <script>
 
-import MainComponent from '../components/Main.vue'
 import HeaderComponent from '../components/Heder.vue'
 
 export default {
     
     components: {
         HeaderComponent,
-        MainComponent
     },
     
 }
