@@ -1,6 +1,7 @@
 <template>
   <div class="container">
-    <div class="row">
+        <LoaderComponent v-if="isLoading"/>
+    <div class="row" v-else>
             <postCard v-for="post in posts" :key="post.id" :post="post" />
     </div>
   </div>
@@ -10,15 +11,17 @@
 // IMPORTIAMO AXIOS
 import axios from 'axios'
 import postCard from '../components/MainComponents/PostCard.vue'
+import LoaderComponent from '../components/MainComponents/LoaderComponent.vue'
 
 export default {
 components: {
         postCard,
+        LoaderComponent
     },
 data : function(){
         return{
             posts : [],
-            activeTagPost : false
+            isLoading : true
         }
     },
 
@@ -27,6 +30,7 @@ methods: {
             axios.get('api/post')
             .then((element)=> {
                 this.posts = element.data.resoult ;
+                this.isLoading = false;
                 console.log(this.posts);
             })
             .catch((error) => {
