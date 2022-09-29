@@ -21,9 +21,6 @@ export default {
 </script>
 
 <style scoped>
-.body-app{
-    background-color: rgb(43, 36, 36);
-    height: 100%;
-}
+
 
 </style>
