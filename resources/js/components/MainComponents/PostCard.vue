@@ -8,9 +8,11 @@
             <img  :src="isValidUrl(post.image_url) ? post.image_url : 'storage/' + post.image_url " class="card-img-top" alt="image-post"> 
         </div>
         <div class="card-body">
-            <h4>
-                {{ post.title }}
-            </h4>
+            <router-link :to="'/post/' +post.id">
+                <h4>
+                    {{ post.title }}
+                </h4>
+            </router-link>
             <div class=" badge badge-fill p-1" :style="post.category_id !== null ? 'background-color: ' + post.category.color : 'background-color: red' ">
                 <h5 class="m-0" v-if="post.category_id == null"> NO CATEGORY </h5>
                 <h5 class="m-0" v-else >{{ post.category.name }} </h5>

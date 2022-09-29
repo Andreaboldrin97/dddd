@@ -1,27 +1,38 @@
 <template>
   <div>
-      ciao
+      <postCard :post="post" :key="post.id" />
   </div>
 </template>
 
 <script>
+// IMPORTIAMO AXIOS
+import axios from 'axios'
+import postCard from '../components/MainComponents/PostCard.vue'
+
 export default {
+    components: {
+        postCard,
+    },
      data : function(){
         return{
-            singlePost : [],
+            post: [],
         }
     },
     methods: {
-         getSinglePostById(needle){
-              axios.get('api/post/'+needle)
+         getSinglePostById(){
+             const id = this.$route.params.id
+              axios.get(`/api/post/${id}`)
              .then((element)=> {
-                 this.singlePost = element.data.resoult ;
-                 console.log(this.singlePost);
+                 this.post = element.data.resoult ;
+                 console.log(element.data);
             })
              .catch((error) => {
                 console.log(error);
             })
          }
+    },
+    created(){
+        this.getSinglePostById()
     }
 
 }
