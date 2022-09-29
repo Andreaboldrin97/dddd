@@ -23,6 +23,7 @@ export default {
 <style>
 .body-app{
     background-color: rgb(43, 36, 36);
+    height: 100vh;
 }
 
 </style>

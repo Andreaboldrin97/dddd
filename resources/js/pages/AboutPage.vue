@@ -1,5 +1,5 @@
 <template>
-  <div class="text-white">>
+  <div class="text-white p-5">>
       LUIGI FANS
   </div>
 </template>

@@ -2182,7 +2182,7 @@ var render = function render() {
       _c = _vm._self._c;
 
   return _c("div", {
-    staticClass: "text-white"
+    staticClass: "text-white p-5"
   }, [_vm._v(">\n    LUIGI FANS\n")]);
 };
 
@@ -2208,7 +2208,7 @@ var render = function render() {
       _c = _vm._self._c;
 
   return _c("div", {
-    staticClass: "text-white"
+    staticClass: "text-white p-5"
   }, [_vm._v("\n    SE AVETE PROBLEMI QUESTO E' IL NUMERO DI STEFANO CAPPELLINI .. 3923356497\n")]);
 };
 
@@ -2329,7 +2329,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.body-app{\n    background-color: rgb(43, 36, 36);\n}\n\n", ""]);
+exports.push([module.i, "\n.body-app{\n    background-color: rgb(43, 36, 36);\n    height: 100vh;\n}\n\n", ""]);
 
 // exports
 
