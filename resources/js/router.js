@@ -15,7 +15,7 @@ const router = new VueRouter({
     //! INDICHIAMO LE ROTTE POSSIBILI
     routes : [
         {
-            path:'/home',
+            path:'/',
             name: 'home',
             component: Home
         }

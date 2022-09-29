@@ -4,7 +4,9 @@
     <div class="container-fluid">
         <div>
              <a class="navbar-brand">BOOLPRES</a>
-             <a class="btn btn-outline-success" href="/">POST</a>
+             <router-link to="/" class="btn btn-outline-success" >
+                HOME
+             </router-link>
         </div>
        <div>
             <a class="btn btn-outline-success" href="/login">LOGIN</a>
@@ -17,7 +19,7 @@
 
 <script>
 export default {
-    name : 'app',
+    name : 'HeaderComponent',
 
 }
 </script>

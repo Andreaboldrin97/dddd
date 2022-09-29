@@ -9,7 +9,7 @@
 
 <script>
 
-import HeaderComponent from '../components/Heder.vue'
+import HeaderComponent from '../components/HederComponent.vue'
 
 export default {
     

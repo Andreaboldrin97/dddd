@@ -10,17 +10,14 @@
 // IMPORTIAMO AXIOS
 import axios from 'axios'
 import postCard from '../components/MainComponents/PostCard.vue'
-import tagPostsCard from '../components/MainComponents/TagPostsCard.vue'
 
 export default {
 components: {
         postCard,
-        tagPostsCard,
     },
 data : function(){
         return{
             posts : [],
-            tagPosts : [],
             activeTagPost : false
         }
     },
