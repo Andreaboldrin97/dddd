@@ -33,19 +33,6 @@ methods: {
                 console.log(error);
             })
         },
-
-        
-        // searchTagId(needle){
-        //     this.activeTagPost = true,
-        //      axios.get('api/tag/'+needle)
-        //     .then((element)=> {
-        //         this.tagPosts = element.data.resoult ;
-        //         console.log(this.tagPosts);
-        //     })
-        //     .catch((error) => {
-        //         console.log(error);
-        //     })
-        // }
     },
  created(){
        this.getPost();

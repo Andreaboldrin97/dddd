@@ -32,10 +32,11 @@
 
 <script>
 export default {
-    props : ['post'],
+    props : {
+        post:Object,
+    },
     data : function(){
         return{
-            searchTagId : ''
         }
     },
 
@@ -47,9 +48,8 @@ export default {
             } else {
                 return true;
             }
-        }
+        },
     }
-
 }
 </script>
 

@@ -1924,11 +1924,11 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['post'],
+  props: {
+    post: Object
+  },
   data: function data() {
-    return {
-      searchTagId: ''
-    };
+    return {};
   },
   methods: {
     isValidUrl: function isValidUrl(str) {
@@ -2006,18 +2006,7 @@ __webpack_require__.r(__webpack_exports__);
       })["catch"](function (error) {
         console.log(error);
       });
-    } // searchTagId(needle){
-    //     this.activeTagPost = true,
-    //      axios.get('api/tag/'+needle)
-    //     .then((element)=> {
-    //         this.tagPosts = element.data.resoult ;
-    //         console.log(this.tagPosts);
-    //     })
-    //     .catch((error) => {
-    //         console.log(error);
-    //     })
-    // }
-
+    }
   },
   created: function created() {
     this.getPost();
