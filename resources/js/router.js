@@ -10,6 +10,7 @@ import Home from './pages/HomePage';
 import About from './pages/AboutPage';
 import Contact from './pages/ContactPage';
 import SinglePost from './pages/SinglePostPage';
+import SingleTag from './pages/SingleTagPage';
 
 //! PER OGNI PAGINA AVREMO UN : PATH(uri), NAME(),COMPONENT DI RIFERIMENTO
 const router = new VueRouter({
@@ -36,6 +37,11 @@ const router = new VueRouter({
             path:'/post/:id',
             name: 'singlePost',
             component: SinglePost
+        },
+        {
+            path:'/tag/:id',
+            name: 'singleTag',
+            component: SingleTag
         }
     ]
 })

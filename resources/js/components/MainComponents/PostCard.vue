@@ -5,7 +5,7 @@
                 {{ post.user.name }}
             </h3>
         <div class="card-img d-flex justify-content-center">
-            <img  :src="isValidUrl(post.image_url) ? post.image_url : 'storage/' + post.image_url " class="card-img-top" alt="image-post"> 
+            <img  :src="isValidUrl(post.image_url) ? post.image_url : '/storage/' + post.image_url " class="card-img-top" alt="image-post"> 
         </div>
         <div class="card-body">
             <router-link :to="'/post/' +post.id">
@@ -23,9 +23,9 @@
         </div>
         <div class="card-footer">
             <span v-for="tag in post.tags" :key="tag.id ">
-                <a v-on:click="$emit('searchTagId' , tag.id)">
+                <router-link :to="'/tag/' +tag.id" v-on:click="$emit('searchTagId' , tag.id)">
                     {{ tag.name }}
-                </a>
+                </router-link>
             </span>
         </div>
     </div>

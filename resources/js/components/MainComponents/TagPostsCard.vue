@@ -5,7 +5,7 @@
                 {{ tagPost.user.name }}
                 </h3>
             <div class="card-img d-flex justify-content-center">
-                <img  :src="isValidUrl( tagPost.image_url ) ? tagPost.image_url : 'storage/' + tagPost.image_url " class="card-img-top" alt="image-post"> 
+                <img  :src="isValidUrl( tagPost.image_url ) ? tagPost.image_url : '/storage/' + tagPost.image_url " class="card-img-top" alt="image-post"> 
             </div>
             <div class="card-body">
                 <h4>
