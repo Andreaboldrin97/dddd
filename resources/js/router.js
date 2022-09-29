@@ -2,6 +2,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 
+//! INDICHIAMO L'UTILLIZZO DI VUE ROUTER
 Vue.use(VueRouter)
 
 //? IMPORTIAMO LE SINGOLE PAGINE
@@ -20,3 +21,5 @@ const router = new VueRouter({
         }
     ]
 })
+
+export default router;
