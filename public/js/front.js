@@ -2181,7 +2181,9 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div", [_vm._v("\n    LUIGI FANS\n")]);
+  return _c("div", {
+    staticClass: "text-white"
+  }, [_vm._v(">\n    LUIGI FANS\n")]);
 };
 
 var staticRenderFns = [];
@@ -2205,7 +2207,9 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div", [_vm._v("\n    SE AVETE PROBLEMI QUESTO E' IL NUMERO DI STEFANO CAPPELLINI .. 3923356497\n")]);
+  return _c("div", {
+    staticClass: "text-white"
+  }, [_vm._v("\n    SE AVETE PROBLEMI QUESTO E' IL NUMERO DI STEFANO CAPPELLINI .. 3923356497\n")]);
 };
 
 var staticRenderFns = [];
