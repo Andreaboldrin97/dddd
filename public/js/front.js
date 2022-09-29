@@ -2549,7 +2549,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.body-app{\n    background-color: rgb(43, 36, 36);\n    height: 100vh;\n}\n\n", ""]);
+exports.push([module.i, "\n.body-app{\n    background-color: rgb(43, 36, 36);\n    height: 100%;\n}\n\n", ""]);
 
 // exports
 
