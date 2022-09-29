@@ -7,6 +7,8 @@ Vue.use(VueRouter)
 
 //? IMPORTIAMO LE SINGOLE PAGINE
 import Home from './pages/HomePage';
+import About from './pages/AboutPage';
+import Contact from './pages/ContactPage';
 
 //! PER OGNI PAGINA AVREMO UN : PATH(uri), NAME(),COMPONENT DI RIFERIMENTO
 const router = new VueRouter({
@@ -18,6 +20,16 @@ const router = new VueRouter({
             path:'/',
             name: 'home',
             component: Home
+        },
+        {
+            path:'/about',
+            name: 'about',
+            component: About
+        },
+        {
+            path:'/contact',
+            name: 'contact',
+            component: Contact
         }
     ]
 })

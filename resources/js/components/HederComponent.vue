@@ -7,10 +7,10 @@
              <router-link to="/" class="btn btn-outline-success" >
                 HOME
              </router-link>
-             <router-link to="/" class="btn btn-outline-success" >
+             <router-link to="/about" class="btn btn-outline-success" >
                 ABOUT
              </router-link>
-             <router-link to="/" class="btn btn-outline-success" >
+             <router-link to="/contact" class="btn btn-outline-success" >
                 CONTACT
              </router-link>
         </div>
