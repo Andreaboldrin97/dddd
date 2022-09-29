@@ -2045,7 +2045,17 @@ var render = function render() {
     attrs: {
       to: "/"
     }
-  }, [_vm._v("\n                HOME\n             ")])], 1), _vm._v(" "), _vm._m(0)])])]);
+  }, [_vm._v("\n                HOME\n             ")]), _vm._v(" "), _c("router-link", {
+    staticClass: "btn btn-outline-success",
+    attrs: {
+      to: "/"
+    }
+  }, [_vm._v("\n                ABOUT\n             ")]), _vm._v(" "), _c("router-link", {
+    staticClass: "btn btn-outline-success",
+    attrs: {
+      to: "/"
+    }
+  }, [_vm._v("\n                CONTACT\n             ")])], 1), _vm._v(" "), _vm._m(0)])])]);
 };
 
 var staticRenderFns = [function () {
