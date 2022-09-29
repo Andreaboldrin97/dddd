@@ -2250,6 +2250,8 @@ var staticRenderFns = [function () {
       _c = _vm._self._c;
 
   return _c("div", {
+    staticClass: "d-flex justify-content-center align-self-center center-container"
+  }, [_c("div", {
     staticClass: "container"
   }, [_c("div", {
     staticClass: "ring"
@@ -2257,7 +2259,7 @@ var staticRenderFns = [function () {
     staticClass: "ring"
   }), _vm._v(" "), _c("div", {
     staticClass: "ring"
-  }), _vm._v(" "), _c("p", [_vm._v("Loading...")]), _c("p")]);
+  }), _vm._v(" "), _c("p", [_vm._v("Loading...")]), _c("p")])]);
 }];
 render._withStripped = true;
 
@@ -2443,7 +2445,9 @@ var render = function render() {
 
   return _c("div", {
     staticClass: "container"
-  }, [_vm.isLoading ? _c("LoaderComponent") : _c("div", {
+  }, [_vm.isLoading ? _c("LoaderComponent", {
+    staticClass: "mt-5"
+  }) : _c("div", {
     staticClass: "row"
   }, _vm._l(_vm.posts, function (post) {
     return _c("postCard", {
@@ -2584,7 +2588,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\nbody[data-v-223a0c56] {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  min-height: 100vh;\n  background: #111;\n}\n.container[data-v-223a0c56] {\n  position: relative;\n  width: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n/* Line */\n.container .ring[data-v-223a0c56] {\n  position: relative;\n  width: 150px;\n  height: 150px;\n  margin: -30px;\n  border: 4px solid transparent;\n  border-radius: 50%;\n  border-top: 4px solid #24ecff;\n}\n/* Head of line */\n.container .ring[data-v-223a0c56]::before{\n  content: '';\n  position: absolute;\n  top: 12px;\n  right: 12px;\n  border-radius: 50%;\n  width: 15px;\n  height: 15px;\n  background: #24ecff;\n  box-shadow: \n    0 0 0 5px #24ecff33,\n    0 0 0 10px #24ecff22,\n    0 0 0 20px #24ecff11,\n    0 0 40px #24ecff,\n    0 0 50px #24ecff;\n}\n/* Circle Position & Animation */\n.container .ring[data-v-223a0c56]:nth-child(1){\n  -webkit-animation: circle2-223a0c56 2s linear infinite;\n          animation: circle2-223a0c56 2s linear infinite;\n}\n.container .ring[data-v-223a0c56]:nth-child(2){\n  -webkit-animation: circle1-223a0c56 2s linear infinite;\n          animation: circle1-223a0c56 2s linear infinite;\n}\n.container .ring[data-v-223a0c56]:nth-child(3){\n  position: absolute;\n  top: -66.66px;\n  -webkit-animation: circle-223a0c56 2s linear infinite;\n          animation: circle-223a0c56 2s linear infinite;\n}\n/* Loading Text */\n.container p[data-v-223a0c56]{\n  overflow: hidden;\n  position: absolute;\n  color: #fff;\n  font-size: 32px;\n  font-family: consolas;\n  bottom: -120px;\n  letter-spacing: 4px;\n}\n/* Animation */\n@-webkit-keyframes circle-223a0c56{\n0%{\n    transform: rotate(0deg);\n}\n100%{\n    transform: rotate(360deg);\n}\n}\n@keyframes circle-223a0c56{\n0%{\n    transform: rotate(0deg);\n}\n100%{\n    transform: rotate(360deg);\n}\n}\n@-webkit-keyframes circle1-223a0c56{\n0%{\n    transform: rotate(120deg);\n}\n100%{\n    transform: rotate(480deg);\n}\n}\n@keyframes circle1-223a0c56{\n0%{\n    transform: rotate(120deg);\n}\n100%{\n    transform: rotate(480deg);\n}\n}\n@-webkit-keyframes circle2-223a0c56{\n0%{\n    transform: rotate(240deg);\n}\n100%{\n    transform: rotate(600deg);\n}\n}\n@keyframes circle2-223a0c56{\n0%{\n    transform: rotate(240deg);\n}\n100%{\n    transform: rotate(600deg);\n}\n}\n", ""]);
+exports.push([module.i, "\n.center-container[data-v-223a0c56]{\n    padding: 25%;\n    height: 100%;\n}\n.container[data-v-223a0c56] {\n  position: relative;\n  width: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n/* Line */\n.container .ring[data-v-223a0c56] {\n  position: relative;\n  width: 150px;\n  height: 150px;\n  margin: -30px;\n  border: 4px solid transparent;\n  border-radius: 50%;\n  border-top: 4px solid #24ecff;\n}\n/* Head of line */\n.container .ring[data-v-223a0c56]::before{\n  content: '';\n  position: absolute;\n  top: 12px;\n  right: 12px;\n  border-radius: 50%;\n  width: 15px;\n  height: 15px;\n  background: #24ecff;\n  box-shadow: \n    0 0 0 5px #24ecff33,\n    0 0 0 10px #24ecff22,\n    0 0 0 20px #24ecff11,\n    0 0 40px #24ecff,\n    0 0 50px #24ecff;\n}\n/* Circle Position & Animation */\n.container .ring[data-v-223a0c56]:nth-child(1){\n  -webkit-animation: circle2-223a0c56 2s linear infinite;\n          animation: circle2-223a0c56 2s linear infinite;\n}\n.container .ring[data-v-223a0c56]:nth-child(2){\n  -webkit-animation: circle1-223a0c56 2s linear infinite;\n          animation: circle1-223a0c56 2s linear infinite;\n}\n.container .ring[data-v-223a0c56]:nth-child(3){\n  position: absolute;\n  top: -66.66px;\n  -webkit-animation: circle-223a0c56 2s linear infinite;\n          animation: circle-223a0c56 2s linear infinite;\n}\n/* Loading Text */\n.container p[data-v-223a0c56]{\n  overflow: hidden;\n  position: absolute;\n  color: #fff;\n  font-size: 32px;\n  font-family: consolas;\n  bottom: -120px;\n  letter-spacing: 4px;\n}\n/* Animation */\n@-webkit-keyframes circle-223a0c56{\n0%{\n    transform: rotate(0deg);\n}\n100%{\n    transform: rotate(360deg);\n}\n}\n@keyframes circle-223a0c56{\n0%{\n    transform: rotate(0deg);\n}\n100%{\n    transform: rotate(360deg);\n}\n}\n@-webkit-keyframes circle1-223a0c56{\n0%{\n    transform: rotate(120deg);\n}\n100%{\n    transform: rotate(480deg);\n}\n}\n@keyframes circle1-223a0c56{\n0%{\n    transform: rotate(120deg);\n}\n100%{\n    transform: rotate(480deg);\n}\n}\n@-webkit-keyframes circle2-223a0c56{\n0%{\n    transform: rotate(240deg);\n}\n100%{\n    transform: rotate(600deg);\n}\n}\n@keyframes circle2-223a0c56{\n0%{\n    transform: rotate(240deg);\n}\n100%{\n    transform: rotate(600deg);\n}\n}\n", ""]);
 
 // exports
 

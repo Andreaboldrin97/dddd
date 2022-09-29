@@ -1,9 +1,11 @@
 <template>
-<div class="container">
-    <div class="ring"></div>
-    <div class="ring"></div>
-    <div class="ring"></div>
-    <p>Loading...<p/>
+<div class="d-flex justify-content-center align-self-center center-container">
+    <div class="container">
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <p>Loading...<p/>
+    </div>
 </div>
 </template>
 
@@ -14,12 +16,9 @@ export default {
 </script>
 
 <style scoped>
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: #111;
+.center-container{
+    padding: 25%;
+    height: 100%;
 }
 .container {
   position: relative;
