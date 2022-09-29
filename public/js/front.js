@@ -2013,17 +2013,18 @@ __webpack_require__.r(__webpack_exports__);
       })["catch"](function (error) {
         console.log(error);
       });
-    },
-    searchTagId: function searchTagId(needle) {
-      var _this2 = this;
+    } // searchTagId(needle){
+    //     this.activeTagPost = true,
+    //      axios.get('api/tag/'+needle)
+    //     .then((element)=> {
+    //         this.tagPosts = element.data.resoult ;
+    //         console.log(this.tagPosts);
+    //     })
+    //     .catch((error) => {
+    //         console.log(error);
+    //     })
+    // }
 
-      this.activeTagPost = true, axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('api/tag/' + needle).then(function (element) {
-        _this2.tagPosts = element.data.resoult;
-        console.log(_this2.tagPosts);
-      })["catch"](function (error) {
-        console.log(error);
-      });
-    }
   },
   created: function created() {
     this.getPost();
@@ -2222,31 +2223,15 @@ var render = function render() {
   return _c("div", {
     staticClass: "container"
   }, [_c("div", {
-    "class": _vm.activeTagPost ? "d-block" : "d-none"
-  }, [_c("div", {
-    staticClass: "row"
-  }, _vm._l(_vm.tagPosts.posts, function (tagPost) {
-    return _c("tagPostsCard", {
-      key: tagPost.id,
-      attrs: {
-        tagPost: tagPost
-      }
-    });
-  }), 1)]), _vm._v(" "), _c("div", {
-    "class": _vm.activeTagPost ? "d-none" : "d-block"
-  }, [_c("div", {
     staticClass: "row"
   }, _vm._l(_vm.posts, function (post) {
     return _c("postCard", {
       key: post.id,
       attrs: {
         post: post
-      },
-      on: {
-        searchTagId: _vm.searchTagId
       }
     });
-  }), 1)])]);
+  }), 1)]);
 };
 
 var staticRenderFns = [];

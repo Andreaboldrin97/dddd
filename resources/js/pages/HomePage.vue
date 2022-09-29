@@ -1,14 +1,7 @@
 <template>
   <div class="container">
-      <div :class="activeTagPost ? 'd-block' : 'd-none'">
-        <div class="row">
-            <tagPostsCard v-for="tagPost in tagPosts.posts" :key="tagPost.id" :tagPost="tagPost"/>
-        </div>
-      </div>
-    <div :class="activeTagPost ? 'd-none' : 'd-block'">
-        <div class="row">
-                <postCard v-for="post in posts" :key="post.id" :post="post" @searchTagId="searchTagId"/>
-        </div>
+    <div class="row">
+            <postCard v-for="post in posts" :key="post.id" :post="post" />
     </div>
   </div>
 </template>
@@ -45,17 +38,17 @@ methods: {
         },
 
         
-        searchTagId(needle){
-            this.activeTagPost = true,
-             axios.get('api/tag/'+needle)
-            .then((element)=> {
-                this.tagPosts = element.data.resoult ;
-                console.log(this.tagPosts);
-            })
-            .catch((error) => {
-                console.log(error);
-            })
-        }
+        // searchTagId(needle){
+        //     this.activeTagPost = true,
+        //      axios.get('api/tag/'+needle)
+        //     .then((element)=> {
+        //         this.tagPosts = element.data.resoult ;
+        //         console.log(this.tagPosts);
+        //     })
+        //     .catch((error) => {
+        //         console.log(error);
+        //     })
+        // }
     },
  created(){
        this.getPost();
