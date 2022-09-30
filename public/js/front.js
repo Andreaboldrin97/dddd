@@ -2103,7 +2103,8 @@ __webpack_require__.r(__webpack_exports__);
     getPost: function getPost() {
       var _this = this;
 
-      var title = this.$route.params;
+      var title = this.$route.params.title;
+      console.log(title);
       axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/post/search/".concat(title)).then(function (element) {
         _this.posts = element.data.resoult;
         _this.isLoading = false;
@@ -2230,13 +2231,12 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     searchByTitle: function searchByTitle(needle) {
       this.searchTitle = needle;
-      console.log(this.searchTitle);
       this.$router.push({
         name: 'seachPost',
         params: {
           title: needle
         }
-      });
+      })["catch"](function (err) {});
     }
   }
 });

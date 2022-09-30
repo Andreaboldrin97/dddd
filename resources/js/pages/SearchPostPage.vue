@@ -27,7 +27,8 @@ data : function(){
 
 methods: {
         getPost : function(){
-          const title = this.$route.params
+          const title = this.$route.params.title
+          console.log(title)
             axios.get(`/api/post/search/${title}`)
              .then((element)=> {
                  this.posts = element.data.resoult ;
