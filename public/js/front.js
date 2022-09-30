@@ -1909,7 +1909,17 @@ module.exports = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'HeaderComponent'
+  name: 'HeaderComponent',
+  data: function data() {
+    return {
+      needle: ''
+    };
+  },
+  methods: {
+    log: function log(element) {
+      console.log(element);
+    }
+  }
 });
 
 /***/ }),
@@ -2203,14 +2213,45 @@ var render = function render() {
     attrs: {
       to: "/contact"
     }
-  }, [_vm._v("\n                CONTACT\n             ")])], 1), _vm._v(" "), _vm._m(0)])])]);
-};
-
-var staticRenderFns = [function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("div", [_c("a", {
+  }, [_vm._v("\n                CONTACT\n             ")])], 1), _vm._v(" "), _c("div", {
+    staticClass: "d-flex"
+  }, [_c("div", {
+    staticClass: "d-flex mx-4",
+    attrs: {
+      role: "search"
+    }
+  }, [_c("input", {
+    directives: [{
+      name: "model",
+      rawName: "v-model.trim",
+      value: _vm.needle,
+      expression: "needle",
+      modifiers: {
+        trim: true
+      }
+    }],
+    staticClass: "form-control me-2",
+    attrs: {
+      type: "search",
+      placeholder: "Search"
+    },
+    domProps: {
+      value: _vm.needle
+    },
+    on: {
+      keyup: function keyup($event) {
+        if (!$event.type.indexOf("key") && _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")) return null;
+        return _vm.$emit("search", _vm.needle);
+      },
+      input: function input($event) {
+        if ($event.target.composing) return;
+        _vm.needle = $event.target.value.trim();
+      },
+      blur: function blur($event) {
+        return _vm.$forceUpdate();
+      }
+    }
+  })]), _vm._v(" "), _c("a", {
     staticClass: "btn btn-outline-success",
     attrs: {
       href: "/login"
@@ -2220,8 +2261,10 @@ var staticRenderFns = [function () {
     attrs: {
       href: "/register"
     }
-  }, [_vm._v("REGISTERED")])]);
-}];
+  }, [_vm._v("REGISTERED")])])])])]);
+};
+
+var staticRenderFns = [];
 render._withStripped = true;
 
 
