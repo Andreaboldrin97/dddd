@@ -19415,11 +19415,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_ContactPage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./pages/ContactPage */ "./resources/js/pages/ContactPage.vue");
 /* harmony import */ var _pages_SinglePostPage__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./pages/SinglePostPage */ "./resources/js/pages/SinglePostPage.vue");
 /* harmony import */ var _pages_SingleTagPage__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./pages/SingleTagPage */ "./resources/js/pages/SingleTagPage.vue");
+!(function webpackMissingModule() { var e = new Error("Cannot find module './pages/SearchTitlePage'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
 // IMPORTIAMO VUE 
 
  //! INDICHIAMO L'UTILLIZZO DI VUE ROUTER
 
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]); //? IMPORTIAMO LE SINGOLE PAGINE
+
 
 
 
@@ -19443,6 +19445,10 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
     path: '/contact',
     name: 'contact',
     component: _pages_ContactPage__WEBPACK_IMPORTED_MODULE_4__["default"]
+  }, {
+    path: '/post/search/:title',
+    name: 'seachTitle',
+    component: !(function webpackMissingModule() { var e = new Error("Cannot find module './pages/SearchTitlePage'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())
   }, {
     path: '/post/:id',
     name: 'singlePost',

@@ -11,6 +11,7 @@ import About from './pages/AboutPage';
 import Contact from './pages/ContactPage';
 import SinglePost from './pages/SinglePostPage';
 import SingleTag from './pages/SingleTagPage';
+import SearchTitle from './pages/SearchTitlePage';
 
 //! PER OGNI PAGINA AVREMO UN : PATH(uri), NAME(),COMPONENT DI RIFERIMENTO
 const router = new VueRouter({
@@ -32,6 +33,11 @@ const router = new VueRouter({
             path:'/contact',
             name: 'contact',
             component: Contact
+        },
+        {
+            path: '/post/search/:title',
+            name : 'seachTitle',
+            component : SearchTitle
         },
         {
             path:'/post/:id',
