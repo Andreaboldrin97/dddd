@@ -42,7 +42,7 @@ const router = new VueRouter({
             path:'/tag/:id',
             name: 'singleTag',
             component: SingleTag
-        }
+        },
     ]
 })
 

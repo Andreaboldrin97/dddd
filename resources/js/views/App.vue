@@ -26,6 +26,7 @@ export default {
         searchByTitle(needle){
             this.searchTitle = needle ;
             console.log(this.searchTitle) ;
+            this.$router.push( { name :'contact' }) ;
         }
     },
     

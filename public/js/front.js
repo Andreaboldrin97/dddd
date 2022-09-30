@@ -2182,6 +2182,9 @@ __webpack_require__.r(__webpack_exports__);
     searchByTitle: function searchByTitle(needle) {
       this.searchTitle = needle;
       console.log(this.searchTitle);
+      this.$router.push({
+        name: 'contact'
+      });
     }
   }
 });
