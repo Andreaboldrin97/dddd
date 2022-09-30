@@ -2099,12 +2099,16 @@ __webpack_require__.r(__webpack_exports__);
       isLoading: true
     };
   },
+  watch: {
+    '$route.params': function $routeParams() {
+      this.getPost();
+    }
+  },
   methods: {
     getPost: function getPost() {
       var _this = this;
 
       var title = this.$route.params.title;
-      console.log(title);
       axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/post/search/".concat(title)).then(function (element) {
         _this.posts = element.data.resoult;
         _this.isLoading = false;

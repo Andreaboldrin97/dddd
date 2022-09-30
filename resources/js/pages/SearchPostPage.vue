@@ -24,11 +24,15 @@ data : function(){
             isLoading : true
         }
     },
+    watch: {
+      '$route.params': function(){
+        this.getPost();
+      }
+    },
 
 methods: {
         getPost : function(){
           const title = this.$route.params.title
-          console.log(title)
             axios.get(`/api/post/search/${title}`)
              .then((element)=> {
                  this.posts = element.data.resoult ;
