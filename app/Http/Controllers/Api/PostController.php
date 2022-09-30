@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Models\Post;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -57,7 +58,7 @@ class PostController extends Controller
      */
     public function searchPost($title)
     {
-        $title = strtolower($title);
+        $title = Str::ucfirst($title);
         $post = Post::with('user')->where('title', 'LIKE', '%' . $title . '%')->get();
         if (count($post) > 0) {
 
