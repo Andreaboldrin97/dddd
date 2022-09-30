@@ -2172,6 +2172,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
     HeaderComponent: _components_HederComponent_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  data: function data() {
+    return {
+      searchTitle: ''
+    };
+  },
+  methods: {
+    searchByTitle: function searchByTitle(needle) {
+      this.searchTitle = needle;
+      console.log(this.searchTitle);
+    }
   }
 });
 
@@ -2591,7 +2602,11 @@ var render = function render() {
 
   return _c("div", {
     staticClass: "body-app pb-3"
-  }, [_c("HeaderComponent"), _vm._v("\n\n    //! INSERIAMO QUI LE ROUTER INDICATE DALL'USER\n   "), _c("router-view")], 1);
+  }, [_c("HeaderComponent", {
+    on: {
+      search: _vm.searchByTitle
+    }
+  }), _vm._v("\n\n    //! INSERIAMO QUI LE ROUTER INDICATE DALL'USER\n   "), _c("router-view")], 1);
 };
 
 var staticRenderFns = [];

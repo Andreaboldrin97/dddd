@@ -1,6 +1,6 @@
 <template>
 <div class="body-app pb-3">
-    <HeaderComponent/>
+    <HeaderComponent @search="searchByTitle"/>
 
     //! INSERIAMO QUI LE ROUTER INDICATE DALL'USER
    <router-view></router-view>
@@ -15,6 +15,18 @@ export default {
     
     components: {
         HeaderComponent,
+    },
+    data: function(){
+        return {
+             searchTitle : ''
+        }
+    },
+    methods :{
+
+        searchByTitle(needle){
+            this.searchTitle = needle ;
+            console.log(this.searchTitle) ;
+        }
     },
     
 }

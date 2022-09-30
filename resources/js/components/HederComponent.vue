@@ -16,7 +16,7 @@
         </div>
        <div class="d-flex">
             <div class="d-flex mx-4" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" v-model.trim="needle"  @keyup.enter="$emit('search' , needle)">
+                <input class="form-control me-2" type="search" placeholder="Search" v-model.trim="needle"  v-on:keyup.enter="$emit('search' , needle)">
             </div>
             <a class="btn btn-outline-success" href="/login">LOGIN</a>
             <a class="btn btn-outline-primary" href="/register">REGISTERED</a>
