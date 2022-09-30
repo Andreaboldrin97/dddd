@@ -2196,7 +2196,10 @@ __webpack_require__.r(__webpack_exports__);
       this.searchTitle = needle;
       console.log(this.searchTitle);
       this.$router.push({
-        name: 'contact'
+        name: 'seachPost',
+        params: {
+          title: needle
+        }
       });
     }
   }
@@ -2550,7 +2553,9 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div", [_vm._v("\n    ciao\n")]);
+  return _c("div", {
+    staticClass: "text-white"
+  }, [_vm._v("\n    ciao\n")]);
 };
 
 var staticRenderFns = [];
