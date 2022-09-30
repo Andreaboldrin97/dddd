@@ -22,4 +22,5 @@ Route::namespace('Api')
     ->group(function () {
         Route::resource('/post', 'PostController');
         Route::resource('/tag', 'TagController');
+        Route::get('post/search/{title}', 'PostController@searchPost');
     });
