@@ -20,7 +20,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::namespace('Api')
     ->group(function () {
+        Route::get('post/search/{title}', 'PostController@searchPost');
         Route::resource('/post', 'PostController');
         Route::resource('/tag', 'TagController');
-        Route::get('post/search/{title}', 'PostController@searchPost');
     });
