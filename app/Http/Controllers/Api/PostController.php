@@ -58,8 +58,8 @@ class PostController extends Controller
      */
     public function searchPost($title)
     {
-        $title = Str::ucfirst($title);
-        $post = Post::with('user')->where('title', 'LIKE', '%' . $title . '%')->get();
+        $title = strtolower($title);
+        $post = Post::with('user', 'category.posts', 'tags')->where('title', 'LIKE', '%' . $title . '%')->get();
         if (count($post) > 0) {
 
             return response()->json([
