@@ -1,5 +1,5 @@
 <template>
-    <div class="my-4 col-6 ">
+    <div class="my-4 col-6">
         <div class="card m-3">
             <h3 class="mx-3">
                 {{ tagPost.user.name }}
@@ -38,6 +38,9 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+.card{
+    height: 100%;
+}
 
 </style>
